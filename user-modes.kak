@@ -1,0 +1,21 @@
+declare-user-mode anchor
+map global anchor a '<esc><a-;>;'     -docstring 'reduce to anchor'
+map global anchor c '<esc>;'          -docstring 'reduce to cursor'
+map global anchor f '<esc><a-;>'      -docstring 'flip cursor and anchor'
+map global anchor h '<esc><a-:><a-;>' -docstring 'ensure anchor after cursor'
+map global anchor l '<esc><a-:>'      -docstring 'ensure cursor after anchor'
+map global anchor s '<esc><a-S>'      -docstring 'split at cursor and anchor'
+
+declare-user-mode echo
+map global echo o ': echo %opt{}<left>'        -docstring 'opt'
+map global echo O ': echo -debug %opt{}<left>' -docstring 'opt debug'
+map global echo r ': echo %reg{}<left>'        -docstring 'reg'
+map global echo R ': echo -debug %reg{}<left>' -docstring 'reg debug'
+map global echo s ': echo %sh{}<left>'         -docstring 'sh'
+map global echo S ': echo -debug %sh{}<left>'  -docstring 'sh debug'
+map global echo v ': echo %val{}<left>'        -docstring 'val'
+map global echo V ': echo -debug %val{}<left>' -docstring 'val debug'
+
+declare-user-mode search
+map global search / ': exec /<ret>\Q\E<left><left>' -docstring 'regex disabled'
+map global search i '/(?i)'                         -docstring 'case insensitive'
