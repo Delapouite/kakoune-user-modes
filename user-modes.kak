@@ -21,12 +21,20 @@ map global search / ': exec /<ret>\Q\E<left><left>' -docstring 'regex disabled'
 map global search i '/(?i)'                         -docstring 'case insensitive'
 
 declare-user-mode case
-map global case j '<esc>`'     -docstring 'lower'
-map global case k '<esc>~'     -docstring 'upper'
-map global case f '<esc><a-`>' -docstring 'flip'
+map global case j '<esc>`'     -docstring '↓ lower'
+map global case k '<esc>~'     -docstring '↑ upper'
+map global case f '<esc><a-`>' -docstring '↕ flip'
 
 declare-user-mode rotation
-map global rotation h '<esc><a-(>' -docstring 'rotate selections content <'
-map global rotation j '<esc>('     -docstring 'rotate main selection <'
-map global rotation k '<esc>)'     -docstring 'rotate main selection >'
-map global rotation l '<esc><a-)>' -docstring 'rotate selections content >'
+map global rotation h '<esc><a-(>' -docstring '← rotate selections content'
+map global rotation j '<esc>('     -docstring '← rotate main selection'
+map global rotation k '<esc>)'     -docstring '→ rotate main selection'
+map global rotation l '<esc><a-)>' -docstring '→ rotate selections content'
+
+declare-user-mode enter
+map global enter H '<esc>I' -docstring '⇐ insert before line'
+map global enter h '<esc>i' -docstring '← insert before'
+map global enter j '<esc>o' -docstring '↓ insert below'
+map global enter k '<esc>O' -docstring '↑ insert above'
+map global enter l '<esc>a' -docstring '→ insert after'
+map global enter L '<esc>A' -docstring '⇒ insert after line'
