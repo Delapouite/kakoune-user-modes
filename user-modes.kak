@@ -38,3 +38,11 @@ map global enter j '<esc>o' -docstring '↓ insert below'
 map global enter k '<esc>O' -docstring '↑ insert above'
 map global enter l '<esc>a' -docstring '→ insert after'
 map global enter L '<esc>A' -docstring '⇒ insert after line'
+
+declare-user-mode trim
+map global trim h '<esc>s^\h+<ret><a-d>'           -docstring '← trim selections content start'
+map global trim j '<esc>S^\s+<ret><a-k>\S<ret>'    -docstring '← trim start'
+map global trim T '<esc>s^\h+|\h+$<ret><a-d>'      -docstring '↔ trim selections content both'
+map global trim t '<esc>_'                         -docstring '↔ trim both'
+map global trim k '<esc>S\s+$|\n<ret><a-k>\S<ret>' -docstring '→ trim end'
+map global trim l '<esc>s\h+$<ret><a-d>'           -docstring '→ trim selections content end'
