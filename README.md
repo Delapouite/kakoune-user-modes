@@ -16,6 +16,7 @@ plug 'delapouite/kakoune-user-modes' %{
   map global user e ': enter-user-mode echo<ret>'     -docstring 'echo mode'
   map global user i ': enter-user-mode enter<ret>'    -docstring 'enter mode'
   map global user r ': enter-user-mode rotation<ret>' -docstring 'rotation mode'
+  map global user t ': enter-user-mode trim<ret>'     -docstring 'trim mode'
   map global user / ': enter-user-mode search<ret>'   -docstring 'search mode'
 }
 ```
