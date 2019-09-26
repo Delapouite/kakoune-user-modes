@@ -26,6 +26,11 @@ plug 'delapouite/kakoune-user-modes' %{
 A collection of user modes that you may find handy.
 Nothing revolutionary, just convenient mappings to avoid using `<alt>`
 
+## See also
+
+- [buffers user-mode](https://github.com/Delapouite/kakoune-buffers)
+- [mirror user-mode](https://github.com/Delapouite/kakoune-mirror)
+
 ## Licence
 
 MIT
