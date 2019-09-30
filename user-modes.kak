@@ -20,10 +20,13 @@ declare-user-mode search
 map global search / ': exec /<ret>\Q\E<left><left>' -docstring 'regex disabled'
 map global search i '/(?i)'                         -docstring 'case insensitive'
 
-declare-user-mode case
-map global case j '<esc>`'     -docstring '↓ lower'
-map global case k '<esc>~'     -docstring '↑ upper'
-map global case f '<esc><a-`>' -docstring '↕ flip'
+declare-user-mode format
+map global format j '<esc>`'               -docstring '↓ lowercase'
+map global format k '<esc>~'               -docstring '↑ uppercase'
+map global format s '<esc><a-`>'           -docstring '↕ switchcase'
+map global format c ': comment-line<ret>'  -docstring 'comment-line'
+map global format C ': comment-block<ret>' -docstring 'comment-block'
+map global format f ': format<ret>'        -docstring 'format'
 
 declare-user-mode rotation
 map global rotation h '<esc><a-(>' -docstring '← rotate selections content'
