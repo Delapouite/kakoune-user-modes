@@ -21,12 +21,15 @@ map global search / ': exec /<ret>\Q\E<left><left>' -docstring 'regex disabled'
 map global search i '/(?i)'                         -docstring 'case insensitive'
 
 declare-user-mode format
-map global format j '<esc>`'               -docstring '↓ lowercase'
-map global format k '<esc>~'               -docstring '↑ uppercase'
-map global format s '<esc><a-`>'           -docstring '↕ switchcase'
-map global format c ': comment-line<ret>'  -docstring 'comment-line'
-map global format C ': comment-block<ret>' -docstring 'comment-block'
-map global format f ': format<ret>'        -docstring 'format'
+map global format j '<esc>`'                          -docstring '↓ lowercase'
+map global format k '<esc>~'                          -docstring '↑ uppercase'
+map global format s '<esc><a-`>'                      -docstring '↕ switchcase'
+map global format f ': format<ret>'                   -docstring 'format'
+map global format c ': comment-line<ret>'             -docstring 'comment-line'
+map global format C ': comment-block<ret>'            -docstring 'comment-block'
+map global format t ': set global indentwidth 0<ret>' -docstring 'indent tab'
+map global format 2 ': set global indentwidth 2<ret>' -docstring 'indent space 2'
+map global format 4 ': set global indentwidth 4<ret>' -docstring 'indent space 4'
 
 declare-user-mode rotation
 map global rotation h '<esc><a-(>' -docstring '← rotate selections content'
