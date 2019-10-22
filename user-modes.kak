@@ -52,3 +52,11 @@ map global trim T '<esc>s^\h+|\h+$<ret><a-d>'      -docstring '↔ trim selectio
 map global trim t '<esc>_'                         -docstring '↔ trim both'
 map global trim k '<esc>S\s+$|\n<ret><a-k>\S<ret>' -docstring '→ trim end'
 map global trim l '<esc>s\h+$<ret><a-d>'           -docstring '→ trim selections content end'
+
+declare-user-mode lint
+map global lint d ': lint-disable<ret>'        -docstring 'disable'
+map global lint e ': lint-enable<ret>'         -docstring 'enable'
+map global lint l ': lint<ret>'                -docstring 'lint'
+map global lint n ': lint-next-error<ret>'     -docstring 'next'
+map global lint p ': lint-previous-error<ret>' -docstring 'prev'
+map global lint b ': b *lint-output*<ret>'     -docstring 'output buffer'
