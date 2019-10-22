@@ -15,6 +15,7 @@ plug 'delapouite/kakoune-user-modes' %{
   map global user e ': enter-user-mode echo<ret>'     -docstring 'echo mode'
   map global user f ': enter-user-mode format<ret>'   -docstring 'format mode'
   map global user i ': enter-user-mode enter<ret>'    -docstring 'enter mode'
+  map global user l ': enter-user-mode lint<ret>'     -docstring 'lint mode'
   map global user r ': enter-user-mode rotation<ret>' -docstring 'rotation mode'
   map global user t ': enter-user-mode trim<ret>'     -docstring 'trim mode'
   map global user / ': enter-user-mode search<ret>'   -docstring 'search mode'
@@ -39,6 +40,7 @@ With this alias, `:u` provides a quick fuzzy-access to all user-modes
 - [buffers user-mode](https://github.com/Delapouite/kakoune-buffers)
 - [mirror user-mode](https://github.com/Delapouite/kakoune-mirror)
 - [text-objects user-mode](https://github.com/Delapouite/kakoune-text-objects)
+- [useful user-modes](https://discuss.kakoune.com/t/useful-user-modes/730)
 
 ## Licence
 
