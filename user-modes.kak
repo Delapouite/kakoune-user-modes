@@ -60,3 +60,12 @@ map global lint l ': lint<ret>'                -docstring 'lint'
 map global lint n ': lint-next-error<ret>'     -docstring 'next'
 map global lint p ': lint-previous-error<ret>' -docstring 'prev'
 map global lint b ': b *lint-output*<ret>'     -docstring 'output buffer'
+
+declare-user-mode keep
+map global keep m '<esc><a-k>'                                      -docstring 'regex matching'
+map global keep n '<esc><a-K>'                                      -docstring 'regex not matching'
+map global keep p '<esc>$'                                          -docstring 'pipe'
+map global keep l '<esc>$[ ${#kak_selection} -gt  ]<left><left>'    -docstring 'length'
+map global keep h '<esc>$[ $kak_main_reg_hash -le  ]<left><left>'   -docstring 'head'
+map global keep e '<esc>$[ $((kak_main_reg_hash % 2)) -eq 0 ]<ret>' -docstring 'even'
+map global keep o '<esc>$[ $((kak_main_reg_hash % 2)) -eq 1 ]<ret>' -docstring 'odd'
